@@ -1,0 +1,3 @@
+Flask==0.12
+eve==0.7.4
+requests==2.18.4
