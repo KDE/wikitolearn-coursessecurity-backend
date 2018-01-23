@@ -5,7 +5,7 @@ from eve import Eve
 from flask import jsonify
 import json
 
-mongo_host = os.environ.get("MONGO_HOST", "persistence-pages-mongodb")
+mongo_host = os.environ.get("MONGO_HOST", "persistence-coursessecurity-mongodb")
 listen_port = int(os.environ.get('LISTEN_PORT'))
 
 eve_settings = {}
