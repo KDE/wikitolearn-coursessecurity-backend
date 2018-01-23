@@ -10,7 +10,7 @@ listen_port = int(os.environ.get('LISTEN_PORT'))
 
 eve_settings = {}
 eve_settings['MONGO_HOST'] = mongo_host
-eve_settings['MONGO_DBNAME'] = "pages"
+eve_settings['MONGO_DBNAME'] = "coursessecurity"
 eve_settings['DEBUG'] = True
 
 eve_settings['SOFT_DELETE'] = True
