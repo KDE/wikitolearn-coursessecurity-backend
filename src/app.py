@@ -5,8 +5,8 @@ from eve import Eve
 from flask import jsonify
 import json
 
-mongo_host = os.environ.get("MONGO_HOST", "persistence-coursessecurity-mongodb")
-listen_port = int(os.environ.get('LISTEN_PORT'))
+mongo_host = os.environ.get("MONGO_HOST")
+service_port = int(os.environ.get('SERVICE_PORT'))
 
 eve_settings = {}
 eve_settings['MONGO_HOST'] = mongo_host
@@ -44,4 +44,4 @@ eve_settings['DOMAIN']['coursessecurity'] = {
 app = Eve(settings=eve_settings)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=listen_port)
+    app.run(host='0.0.0.0', port=service_port)

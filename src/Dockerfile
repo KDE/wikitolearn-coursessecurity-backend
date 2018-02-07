@@ -12,8 +12,9 @@ RUN easy_install3 pip
 ADD requirements.txt /opt/
 RUN pip3 install -r /opt/requirements.txt
 
-ENV LISTEN_PORT 10020
-EXPOSE ${LISTEN_PORT}
+ARG SERVICE_PORT
+ENV SERVICE_PORT=${SERVICE_PORT}
+EXPOSE ${SERVICE_PORT}
 
 ENTRYPOINT python3 /opt/app.py
 ADD app.py /opt/

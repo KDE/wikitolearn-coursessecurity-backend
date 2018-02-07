@@ -1,14 +1,12 @@
 version: '3'
 services:
   persistence-coursessecurity-app:
-    build: ./src/
+    build:
+      context: ./src/
+      args:
+        SERVICE_PORT: ${SERVICE_PORT}
+    image: wikitolearn/coursessecurity
     ports:
-    - "10020:10020"
-  persistence-coursessecurity-mongodb:
-    image: "mongo:3.4"
-    volumes:
-    - persistence-coursessecurity-mongodb-configdb:/data/configdb
-    - persistence-coursessecurity-mongodb-db:/data/db
-volumes:
-  persistence-coursessecurity-mongodb-configdb:
-  persistence-coursessecurity-mongodb-db:
+    - "${SERVICE_PORT}:${SERVICE_PORT}"
+    environment:
+    - MONGO_HOST=${MONGO_HOST}
