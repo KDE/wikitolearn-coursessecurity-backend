@@ -1,10 +1,10 @@
-version: '3'
+version: '3.4'
 services:
-  persistence-coursessecurity-mongodb:
+  coursessecurity-backend-mongodb:
     image: "mongo:3.4"
     volumes:
-    - persistence-coursessecurity-mongodb-configdb:/data/configdb
-    - persistence-coursessecurity-mongodb-db:/data/db
+      - coursessecurity-backend-mongodb-configdb:/data/configdb
+      - coursessecurity-backend-mongodb-db:/data/db
 volumes:
-  persistence-coursessecurity-mongodb-configdb:
-  persistence-coursessecurity-mongodb-db:
+  coursessecurity-backend-mongodb-configdb:
+  coursessecurity-backend-mongodb-db:
