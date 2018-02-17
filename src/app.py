@@ -35,7 +35,7 @@ eve_settings['DOMAIN']['coursessecurity'] = {
             'required': True
         },
         'owner_id':{
-            'type': 'integer'
+            'type': 'string'
         },
     },
 }
